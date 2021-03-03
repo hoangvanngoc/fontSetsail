@@ -26,7 +26,7 @@ nguyên tăc:
   4.video review tour  ----> ok
   5.top review with slider small ----> chua js
   6.service  -----> ok 
-  7.total tour (slider image)
+  7.total tour (slider image) --> ok
   8.country tour
   9. footer
 2.Xây móng
@@ -35,7 +35,9 @@ nguyên tăc:
 4.hoàn thiện
  
 
-############################-------> đang chỉnh animation cho big slider zoom lên.
+############################-------> còn lại phần footer
+
+lỗi: thanh next và prev ở big header không thể hover.
 
 
 
@@ -45,19 +47,19 @@ nguyên tăc:
     ta tạo một lớp giả cho class cần tạo hover gạch chấn
     sau đó xét chiều cao cho nó, và để width: 0;
        đổ background-color: là màu cần hover,
-  + Sau khi hover vào thì để width: 100%;
-    để tạo hiệu ứng chạy ta dùng transiton cho chiều width và để thời gian (  transition: width 0.3s ) -> thì phần background
-    của lớp giả sẽ phóng ra
+   + Sau khi hover vào thì để width: 100%;
+     để tạo hiệu ứng chạy ta dùng transiton cho chiều width và để thời gian (  transition: width 0.3s ) -> thì phần background
+     của lớp giả sẽ phóng ra
       và muốn có hiệu ứng thu vào thì cũng cho thời gian của width ở class gốc là được
 
    ####  để tạo hiệu ứng hover zoom ảnh ta dùng thuộc tính :
           transition: transform 0.3s; ở class của image , đặt kích thước cho imge,
           sau đó ở hover ta cho thuộc tính transform: scale(1.2); là được (chưa có cách hay hơn)
 
-####  để tạo xem video với javascript thì đầu tiên
+   ####  để tạo xem video với javascript thì đầu tiên
     + ta lấy id của các thẻ để xem và dừng video
-    after that ta tạo function để thực thi dừng và mở video và để sự kiện onclick(nameFunction()) vào thẻ video
-    nếu dừng video thì ta để display = none;
+      after that ta tạo function để thực thi dừng và mở video và để sự kiện onclick(nameFunction()) vào thẻ video
+      nếu dừng video thì ta để display = none;
     ((((((((((((((((((
      var videoPlayer = document.getElementById("videoPlayer");
     var myVideo = document.getElementById("myVideo");
@@ -75,3 +77,6 @@ nguyên tăc:
         videoPlayer.style.display = 'block';
     } 
     ))))))))))))))))))
+
+    ##### ta có thể dùng transition cho màu săc để hiệu ứng
+      transition: color 0.2s ease;
